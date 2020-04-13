@@ -3,51 +3,51 @@ title: I want to learn Python.
 date: 2020-04-11
 ---
 
-So as the title suggests I'm quite interested to leran Python. Not only because it became the second popularest programming language in 2020. I see a lot of fun projects at github, reddit or youtube and a lot of them are written in Python.
+So as the title suggests I'm quite interested to learn Python. Not only because it became the second popular programming language in 2020. I see a lot of fun projects at Github, Reddit or youtube and a lot of them are written in Python.
 So how to start? 
-First I need to set up my enviroment. Windows or Mac? As always I am not quite sure - so i will do both. At the moment i am at my windows pc so we will start from here.
+First I need to set up my environment. Windows or Mac? As always I am not quite sure - so I will do both. At the moment I am at my windows pc so we will start from here.
 What to build?
-First i am just cloning a github repo and try to get it to work on my local machine. After that i will deploy the stolen code on pythonanywhere.com to make it accecible all over the world. If that works i am going to modify the project or build my own.
+First I am just cloning a GitHub repo and try to get it to work on my local machine. After that, I will deploy the stolen code on pythonanywhere.com to make it accessible all over the world. If that works I am going to modify the project or build my own.
 
-Set up enviroment
+Set up environment
 1. download python 3.6 from python.org
-2. open cmd and run "python --version" to check if its installed
+2. open cmd and run "python --version" to check if it is installed
 3. type "python" -> from here you can run simple "code" like 2*2 hit enter and it should return 4.
-4. type exit() to exit python programm
+4. type exit() to exit python program
 
-What repo should i use? Saw an interessting one which checks who you are following on instagram and compares it to the ones who are following you. So you can easily see who is not following you back.
-The problem is that instagram changed their UI and the program did not longer work. Anyway let's try it an see if we can fix it or at least learn from it.
+What repo should I use? Saw an interesting one which checks who you are following on Instagram and compares it to the ones who are following you. So you can easily see who is not following you back.
+The problem is that Instagram changed their UI and the program did not longer work. Anyway, let's try it and see if we can fix it or at least learn from it.
 
 So the creator of this project id <a href="https://github.com/aj-4" target="_blank">Aaron</a>. Thanks Aron for providing me an non functional app - just kidding.
 
 Clone repo
 1. enter cmd and create new folder "mkdir Python"
-2. clone repo with git (you need git cli on your computer for this) "git clone ur-to-repo"
+2. clone repo with git (you need git CLI on your computer for this) "git clone ur-to-repo"
 3. done
 
 So for this project we need selenium and urllib3 - no idea what that is. Let's google it.
-Quote from selenium.dev "selenium automates browser." - ok thanks, i don't need to know more.
+Quote from selenium.dev "selenium automates browser." - ok thanks, I don't need to know more.
 urllib3 -> HTTP client for Python 
 install both with pip. "pip install urllib3" "pip install selenium"
 
 Although we need chromedriver 
 What is chromedriver? 
-So basicly it is for automated testing. So you can navigating to web pages, user input, JavaScript execution, and more
-How to intall chromedriver (windows)
+So basically it is for automated testing. So you can navigate to web pages, user input, JavaScript execution, and more
+How to install chromedriver (windows)
 1. download zip from https://chromedriver.storage.googleapis.com/index.html?path=80.0.3987.106/
 2. create dir at C:\webdrivers
-3. insert unziped file here
-4. right click on "This PC" -> advanced systemproperties -> enviroment variables -> new 
-5. inser "C:\webdrivers" and save
+3. insert unzipped file here
+4. right-click on "This PC" -> advanced system properties -> environment variables -> new 
+5. insert "C:\webdrivers" and save
 6. done - check it in cmd with "chromedriver" -> Should prompt up "Starting Chromedriver ... "
 
-Okay i think we got all that we need. Lets try to start the application.
-Navigate with your cmd in the project folder. enter "python main.py" and voila - Chrome opens up. But thats it ... Aaron migtht told the truth when he said the program isn't working. 
+Okay, I think we got all that we need. Let's try to start the application.
+Navigate with your cmd in the project folder. enter "python main.py" and voila - Chrome opens up. But that's it ... Aaron might tell the truth when he said the program isn't working. 
 Nevermind lets find out what Instagram changed on their UI and maybe we can fix the program.
 
-Okay the fixes are more that easy, just edit some xpaths. 
-I gonna add an input so i can check other profiles. After that I write the result(who is not following you back) in a text document.
+Okay, the fixes are more than easy, just edit some xpaths. 
+I gonna add an input so I can check other profiles. After that, I write the result(who is not following you back) in a text document.
 
 Python learning Tips:
-- working in a virtual enviroment is best practice, so you can install dependencies that are neccecary just for the project
-- more herer https://www.youtube.com/watch?v=5tcs2qXP3Pg&t=
+- working in a virtual environment is best practice, so you can install dependencies that are necessary just for the project
+- more here https://www.youtube.com/watch?v=5tcs2qXP3Pg&t=
