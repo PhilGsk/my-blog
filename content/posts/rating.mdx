@@ -1,0 +1,36 @@
+---
+title: I want to learn Python.
+date: 2020-04-11
+---
+
+A few thoughts about a little side project. A web app where you can create an account and rate movies/series/books/audiobooks/podcasts you watched/listened (following called as **medium**).
+I want to realize it with Django (python). So its gonna be a server-side rendered web app.
+Data-Modell might be like this:
+| Users           |
+| --------------  |
+| + ID            |
+| + NAME          |
+
+| Medium          |
+| --------------  |
+| + ID            |
+| + NAME          |
+| + TYPE          |
+| + RELEASEYEAR   |
+| + DATE-WATCHED  |
+| + IMAGEURL      |
+
+MVP only. Some thoughts about features that could be added. 
+So normal procedure if you want to watch a new medium:
+- browsing hours through your streaming provider
+- if you click on a medium that might be interesting you see a rating based on hundreds of people you don't even know
+- if the rating is not that good you might give it not even a try
+
+The problem I want to solve is to see just relevant reviews/ratings. You can follow people who have the same taste as you when it comes to mediums. 
+So you can see mediums that people watched, that you are following and see their rating.
+
+TODO:
+- define MVP
+- Obviously whole back and frontend with Django
+- decide which DB (SQL, NoSQL, graph)
+- find API or write a script to get all movies/series etc.
