@@ -1,6 +1,6 @@
 ---
-title: I want to learn Python.
-date: 2020-04-11
+title: Rate Movies And Series - Python Project
+date: 2020-04-18
 ---
 
 A few thoughts about a little side project. A web app where you can create an account and rate movies/series/books/audiobooks/podcasts you watched/listened (following called as **medium**).
@@ -36,3 +36,45 @@ TODO:
 - Obviously whole back and frontend with Django
 - decide which DB (SQL, NoSQL, graph)
 - find API or write a script to get all movies/series etc.
+
+*UPDATE 25.05.2020*
+So I started a Django project but still learning fundamentals of Python/Django.
+A few days a go I thought about how I will get all the movies and series. So I googled a bit and found a website called "whostreamswhat" (in german). 
+Basically this page got a DB with over 127k movies and about 60k series and provide them to show who is streaming what. (As the name suggests)
+Wouldnt it be nice to get all the data from them? unfortunately I could not find an API because they use server-side-rendering.
+A few weeks a ago I used a python script to crawl through Instagram so you get a list with the persons who are not following you back(https://www.blog.pippo.tech/python-project/).
+I modified the code so the program crawl through the Website "whostreamswhat" and put all title, genre and release year in a list - that was quite easy.
+I will paste the script below.
+
+```jsx
+from selenium import webdriver
+from time import sleep
+
+
+class InstaBot:
+    def __init__(self):
+        self.driver = webdriver.Chrome()
+        self.driver.get("https://www.werstreamt.es/filme/")
+        sleep(2)
+
+
+    def getMovies(self):
+        self.driver.refresh()
+        counter = 2
+        i = 2
+        while True:
+            name = self.driver.find_element_by_xpath("/html/body/div[2]/div/div/section/div/div/div/ul/li["+str(i)+"]/a/div[2]/strong")
+            genreAndYear = self.driver.find_element_by_xpath("/html/body/div[2]/div/div/section/div/div/div/ul/li["+str(i)+"]/a/div[2]/span")
+            x = genreAndYear.text.split(", ")
+            x.insert(0, name.text)
+            #http request to insert it into a DB
+            i+=1
+            counter+=1
+            if(counter == 21):
+                self.driver.execute_script("window.scrollBy(0,1000)")
+                i+=1
+                counter = 2
+
+my_bot = InstaBot()
+my_bot.getMovies()
+```
